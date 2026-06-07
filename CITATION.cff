@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: "Arithmetic unification of masses and energies via the exceptional lattice Λ72"
+message: "If you use this work, please cite it as below."
+authors:
+  - family-names: "De Dominicis"
+    given-names: "Bruno"
+date-released: 2026-05
+doi: 10.5281/zenodo.20042320
+repository-code: "https://github.com/your-username/mass-unification-L72"
+license: "MIT"
