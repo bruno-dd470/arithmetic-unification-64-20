@@ -107,6 +107,13 @@ If you use this work, please cite:
 - Nebe, G. (2010) - Exceptional lattices
 - Rowlands, P. (2007) - Zero to Infinity
 
+## Related work
+
+- **Nebe, G. (2010)** - *An even unimodular 72-dimensional lattice of minimum 8*  
+  arXiv:1008.2862 | [DOI: 10.48550/arXiv.1008.2862](https://doi.org/10.48550/arXiv.1008.2862)
+  
+  This paper constructs the exceptional lattice Λ72, whose 48 non-degenerate roots numerically coincide with our 15 β_k constants.
+
 ## Contact
 
 For questions or collaboration, please open an issue on GitHub.
