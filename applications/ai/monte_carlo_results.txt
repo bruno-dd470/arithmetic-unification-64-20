@@ -1,0 +1,14 @@
+MONTE-CARLO RANDOMIZATION TEST
+==================================================
+
+Simulations: 10000
+
+MASSES NUCLEAIRES:
+  - Erreur avec beta reelles: 0.00029753%
+  - Erreur mediane aleatoire: 0.00040471%
+  - p-valeur: 0.000000
+
+ENERGIES D'IONISATION:
+  - Erreur avec beta reelles: 0.00031226%
+  - Erreur mediane aleatoire: 0.00039187%
+  - p-valeur: 0.003100

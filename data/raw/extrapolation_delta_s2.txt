@@ -1,0 +1,8 @@
+# Extrapolation des racines √λ avec le nombre d'argent
+delta_s     = 2.4142135624
+delta_s2    = 5.8284271247
+gamma ajusté = 0.2195331655
+√λ(l=7)      = 0.3409962878
+√λ(l=20) ext = 1.8165738303
+√λ(l=20) orig = 1.8165738303
+√λ(l=100)    = 40.7339568701

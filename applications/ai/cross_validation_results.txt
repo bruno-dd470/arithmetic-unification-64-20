@@ -1,0 +1,14 @@
+Résultats de la validation croisée
+==================================================
+
+Masses nucléaires (3557 isotopes, 5 folds):
+  - Erreur entraînement : 0.000312 %
+  - Erreur test : 0.000312 %
+  - Écart : 0.000000 %
+  - Erreur max test : 0.000341 %
+
+Énergies d'ionisation (5854 points, 5 folds):
+  - Erreur entraînement : 0.000312 %
+  - Erreur test : 0.000312 %
+  - Écart : 0.000000 %
+  - Erreur max test : 0.000341 %

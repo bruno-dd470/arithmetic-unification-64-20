@@ -1,0 +1,11 @@
+# Paramètres optimisés pour la formule des masses AME2020
+Lambda0 = 0.1069892866
+alpha = 1.2795330564
+beta = 0.0795943175
+Lambda_fund = 7.726
+u_to_MeV = 931.49410242
+
+# Statistiques sur l'ensemble des isotopes
+mean_error_percent = 0.028678
+std_error_percent = 0.028536
+percent_below_0.2 = 100.00
