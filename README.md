@@ -110,42 +110,4 @@ If you use this work, please cite:
 ## Contact
 
 For questions or collaboration, please open an issue on GitHub.
-EOF
-```
 
-## Vérifier le nouveau README
-
-```bash
-cat ~/Bureau/mass_unification_L72_git/README.md
-head -30 ~/Bureau/mass_unification_L72_git/README.md
-```
-
-## Ajouter le README à Git
-
-```bash
-cd ~/Bureau/mass_unification_L72_git
-git add README.md
-git commit -m "Improve README with full documentation"
-```
-
-## Si vous voulez aussi un CITATION.cff
-
-```bash
-cat > ~/Bureau/mass_unification_L72_git/CITATION.cff << 'EOF'
-cff-version: 1.2.0
-title: "Arithmetic unification of masses and energies via the exceptional lattice Λ72"
-message: "If you use this work, please cite it as below."
-authors:
-  - family-names: "De Dominicis"
-    given-names: "Bruno"
-date-released: 2026-05
-doi: 10.5281/zenodo.20042320
-repository-code: "https://github.com/your-username/mass-unification-L72"
-license: "MIT"
-EOF
-
-git add CITATION.cff
-git commit -m "Add CITATION.cff"
-```
-
-Voulez-vous que j'ajoute ou modifie quelque chose dans le README ?
