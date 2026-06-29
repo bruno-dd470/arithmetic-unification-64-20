@@ -1,14 +1,11 @@
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
-[![DOI](https://zenodo.org/badge/1284323833.svg)](https://doi.org/10.5281/zenodo.21044906)
+[![DOI](https://zenodo.org/badge/1284323833.svg)](https://doi.org/10.5281/zenodo.21044905)
 [![Clones](https://img.shields.io/badge/Clones-View%20on%20GitHub-blue?logo=github)](https://github.com/bruno-dd470/arithmetic-unification-64-20/graphs/traffic)
-
 
 
 # A Unique Arithmetic for Three Ontologies: Matter, Life, and Information
 
 **一种适用于三种本体（物质、生命与信息）的统一算术**
-
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21044906.svg)](https://doi.org/10.5281/zenodo.21044906)
 
 ---
 
