@@ -1,32 +1,44 @@
 % commande d'exécution simple :
-% pandoc article_A_H_R_N_v3_FR.md --template=template_FR.tex -o article_A_H_R_N_v3_FR.pdf --pdf-engine=xelatex
-% pandoc article_A_H_R_N_v3_FR.md --template=template_FR.tex --listings -o article_A_H_R_N_v3_FR.pdf --pdf-engine=xelatex
-% pandoc article_A_H_R_N_v3_FR.md --template=template_FR.tex --listings --citeproc -o article_A_H_R_N_v3_FR.pdf --pdf-engine=xelatex
+% pandoc article_A_H_R_N_v3_EN.md --template=template_EN.tex -o article_A_H_R_N_v3_EN.pdf --pdf-engine=xelatex
+% pandoc article_A_H_R_N_v3_EN.md --template=template_EN.tex --listings -o article_A_H_R_N_v3_EN.pdf --pdf-engine=xelatex
+% pandoc article_A_H_R_N_v3_EN.md --template=template_EN.tex --listings --citeproc -o article_A_H_R_N_v3_EN.pdf --pdf-engine=xelatex
 % pour avoir les emojis facilement, utiliser lualatex
-% pandoc article_A_H_R_N_v3_FR.md --template=template_FR.tex --listings -o article_A_H_R_N_v3_FR.pdf --pdf-engine=lualatex
+% pandoc article_A_H_R_N_v3_EN.md --template=template_EN.tex --listings -o article_A_H_R_N_v3_EN.pdf --pdf-engine=lualatex
 
 % ==== commandes pour biblatex pour appels de références cliquable
 % Générez d'abord le .tex
-% pandoc article_A_H_R_N_v3_FR.md --template=template_FR.tex -o article_A_H_R_N_v3_FR.tex --pdf-engine=xelatex --bibliography=references.bib --biblatex --toc --toc-depth=2
+% pandoc article_A_H_R_N_v3_EN.md --template=template_EN.tex -o article_A_H_R_N_v3_EN.tex --pdf-engine=xelatex --bibliography=references.bib --biblatex --toc --toc-depth=2
+
 % Compilez avec latexmk (gère toutes les passes automatiquement)
-% latexmk -xelatex article_A_H_R_N_v3_FR.tex
+% latexmk -xelatex article_A_H_R_N_v3_EN.tex
 
 \documentclass[11pt]{article}
 \tracinglostchars=2
+
 % ==================== FONTS ET LANGUE ====================
 \usepackage[no-math]{fontspec}
-\usepackage[french]{babel}
+\usepackage[english]{babel}  
 \usepackage{xeCJK}
+
 \providecommand{\tightlist}{\setlength{\itemsep}{2pt}\setlength{\parskip}{6pt}}
+
 \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
 \setmainfont{Libertinus Serif}[
-BoldFont=Libertinus Serif Bold,
-ItalicFont=Libertinus Serif Italic,
-BoldItalicFont=Libertinus Serif Bold Italic]
-\setsansfont{Libertinus Sans}[BoldFont=Libertinus Sans Bold]
-\setmonofont{JuliaMono}[BoldFont=JuliaMono Bold,Scale=0.9]
-\setCJKmainfont{Noto Serif CJK SC}[BoldFont=Noto Serif CJK SC Bold]
-\frenchbsetup{StandardLists=true}
+  BoldFont=Libertinus Serif Bold,
+  ItalicFont=Libertinus Serif Italic,
+  BoldItalicFont=Libertinus Serif Bold Italic
+]
+\setsansfont{Libertinus Sans}[
+  BoldFont=Libertinus Sans Bold
+]
+\setmonofont{JuliaMono}[
+  BoldFont=JuliaMono Bold,
+  Scale=0.9
+]
+\setCJKmainfont{Noto Serif CJK SC}[
+  BoldFont=Noto Serif CJK SC Bold
+]
+
 % ==================== MATHÉMATIQUES ====================
 \usepackage{amsmath}
 \usepackage{mathtools}
@@ -36,12 +48,14 @@ BoldItalicFont=Libertinus Serif Bold Italic]
 \renewcommand{\mathcal}[1]{\oldmathcal{#1}}
 \AtBeginDocument{\let\mathcal\symcal}
 \let\Box\square
-\providecommand{\Box}{\square}
+\providecommand{\Box}{\square}  
 \setmathfont{Libertinus Math}
 \AtBeginDocument{\let\mathcal\symcal}
 \setmathfont{Libertinus Math}[range={cal,bfcal},Scale=MatchLowercase]
 \usepackage{dsfont}
+
 \setcounter{secnumdepth}{0}
+
 % ==================== COMMANDES PERSONNALISÉES ====================
 \usepackage{pifont}
 \newcommand{\bra}[1]{\langle #1|}
@@ -51,6 +65,7 @@ BoldItalicFont=Libertinus Serif Bold Italic]
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
+
 % Symboles de validation
 \providecommand{\cmark}{\ding{51}}
 \providecommand{\xmark}{\ding{55}}
@@ -58,6 +73,7 @@ BoldItalicFont=Libertinus Serif Bold Italic]
 \newcommand{\symSucces}{\textcolor{success}{\cmark}}
 \newcommand{\symEchec}{\textcolor{failure}{\xmark}}
 \newcommand{\symAttention}{\textcolor{warning}{\wmark}}
+
 % ==================== TABLE DES MATIÈRES ====================
 \usepackage{tocloft}
 \renewcommand{\cftsecpagefont}{\normalfont}
@@ -69,13 +85,15 @@ BoldItalicFont=Libertinus Serif Bold Italic]
 \setlength{\cftsubsecindent}{10pt}
 \setlength{\cftsubsubsecindent}{20pt}
 \setcounter{tocdepth}{2}
+
 % ==================== GÉOMÉTRIE ET MISE EN PAGE ====================
 \usepackage{geometry}
 \geometry{
-margin=2.5cm,
-headsep=4mm,
-footskip=12pt
+  margin=2.5cm,
+  headsep=4mm,
+  footskip=12pt
 }
+
 % Interlignes et espacements
 \setlength{\baselineskip}{14pt}
 \setlength{\parskip}{6pt}
@@ -87,11 +105,13 @@ footskip=12pt
 \setlength{\belowdisplayskip}{8pt}
 \setlength{\abovedisplayshortskip}{4pt}
 \setlength{\belowdisplayshortskip}{4pt}
+
 % Espacement des équations
 \setlength{\abovedisplayskip}{6pt plus 1pt minus 1pt}
 \setlength{\belowdisplayskip}{6pt plus 1pt minus 1pt}
 \setlength{\abovedisplayshortskip}{3pt plus 1pt minus 1pt}
 \setlength{\belowdisplayshortskip}{3pt plus 1pt minus 1pt}
+
 % ==================== TABLEAUX ====================
 \usepackage{array}
 \usepackage{longtable}
@@ -105,130 +125,142 @@ footskip=12pt
 \setlength{\LTpre}{6pt}
 \setlength{\LTpost}{6pt}
 \setlength{\extrarowheight}{2pt}
-% Forcer "Tableau" au lieu de "Table"
-\renewcommand{\tablename}{Tableau}
-\captionsetup[table]{name=Tableau}
+
 % ==================== LISTES ====================
 \usepackage{enumitem}
 \setlist{nosep, left=0pt}
+
 % ==================== COULEURS ====================
 \usepackage{xcolor}
 \definecolor{success}{RGB}{0,150,0}
 \definecolor{failure}{RGB}{200,0,0}
 \definecolor{warning}{RGB}{255,140,0}
 \definecolor{codebg}{RGB}{245,245,245}
+
 % ==================== CODE ET LISTINGS ====================
 \usepackage{listings}
 \usepackage{alltt}
 \usepackage{framed}
 \definecolor{shadecolor}{rgb}{0.9,0.9,0.9}
+
 \lstset{
-basicstyle=\ttfamily\small,
-breaklines=true,
-frame=single,
-backgroundcolor=\color{codebg},
-numbers=left,
-numberstyle=\tiny\color{gray},
-showstringspaces=false,
-tabsize=4
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  frame=single,
+  backgroundcolor=\color{codebg},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  showstringspaces=false,
+  tabsize=4
 }
+
 % ==================== BOÎTES ET ENCADRÉS ====================
 \usepackage{tikz}
 \usetikzlibrary{positioning, arrows.meta, calc}
 \usepackage{tcolorbox}
 \tcbuselibrary{most}
 \newtcolorbox{validationbox}[2][]{
-colback=green!5!white,
-colframe=green!75!black,
-fonttitle=\bfseries,
-title=#2,
-#1
+  colback=green!5!white,
+  colframe=green!75!black,
+  fonttitle=\bfseries,
+  title=#2,
+  #1
 }
 \newtcolorbox{errorbox}[2][]{
-colback=red!5!white,
-colframe=red!75!black,
-fonttitle=\bfseries,
-title=#2,
-#1
+  colback=red!5!white,
+  colframe=red!75!black,
+  fonttitle=\bfseries,
+  title=#2,
+  #1
 }
 \newtcolorbox{warningbox}[2][]{
-colback=orange!5!white,
-colframe=orange!75!black,
-fonttitle=\bfseries,
-title=#2,
-#1
+  colback=orange!5!white,
+  colframe=orange!75!black,
+  fonttitle=\bfseries,
+  title=#2,
+  #1
 }
+
 % ==================== FIGURES ET IMAGES ====================
 \usepackage{graphicx}
 \usepackage{adjustbox}
 \usepackage{capt-of}
 \usepackage{pdflscape}
 \setkeys{Gin}{keepaspectratio=true}
+
 \newcommand{\autofigure}[3][]{
-\begin{figure}[htbp]
-\centering
-\adjustbox{max width=\textwidth, max height=0.6\textheight, keepaspectratio, center}{
-\includegraphics{#2}
+  \begin{figure}[htbp]
+  \centering
+  \adjustbox{max width=\textwidth, max height=0.6\textheight, keepaspectratio, center}{
+    \includegraphics{#2}
+  }
+  \captionof{figure}{#3}
+  \label{fig:#2}
+  \end{figure}
 }
-\captionof{figure}{#3}
-\label{fig:#2}
-\end{figure}
-}
+
 \newcommand{\autolandscapefigure}[3][]{
-\afterpage{
-\begin{landscape}
-\begin{figure}[p]
-\centering
-\adjustbox{max width=0.9\textwidth, max height=0.7\textheight, keepaspectratio, center}{
-\includegraphics{#2}
+  \afterpage{
+    \begin{landscape}
+    \begin{figure}[p]
+    \centering
+    \adjustbox{max width=0.9\textwidth, max height=0.7\textheight, keepaspectratio, center}{
+      \includegraphics{#2}
+    }
+    \captionof{figure}{#3}
+    \label{fig:#2}
+    \end{figure}
+    \end{landscape}
+  }
 }
-\captionof{figure}{#3}
-\label{fig:#2}
-\end{figure}
-\end{landscape}
-}
-}
+
 % ==================== EN-TÊTE ET PIED DE PAGE ====================
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[C]{\textsc{Une arithmétique unique pour trois ontologies}}
+\fancyhead[C]{\textsc{A Unique Arithmetic for Matter, Life, and Information}}
 \fancyhead[R]{\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0pt}
+
 \fancypagestyle{plain}{
-\fancyhf{}
-\fancyhead[C]{\textsc{Une arithmétique unique pour trois ontologies}}
-\fancyhead[R]{\thepage}
-\renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\footrulewidth}{0pt}
+  \fancyhf{}
+  \fancyhead[C]{\textsc{A Unique Arithmetic for Matter, Life, and Information}}
+  \fancyhead[R]{\thepage}
+  \renewcommand{\headrulewidth}{0.4pt}
+  \renewcommand{\footrulewidth}{0pt}
 }
+
 \fancypagestyle{firstpage}{
-\fancyhf{}
-\fancyhead[C]{\textsc{Une arithmétique unique pour trois ontologies}}
-\fancyhead[R]{}
-\renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\footrulewidth}{0pt}
+  \fancyhf{}
+  \fancyhead[C]{\textsc{A Unique Arithmetic for Matter, Life, and Information}}
+  \fancyhead[R]{}
+  \renewcommand{\headrulewidth}{0.4pt}
+  \renewcommand{\footrulewidth}{0pt}
 }
+
 % ==================== INSERTION DES COMMANDES YAML ====================
 $header-includes$
+
 % ==================== HYPERLIENS (chargé en dernier) ====================
 \usepackage{hyperref}
+
 \hypersetup{
-colorlinks=true,
-linkcolor=blue!80!black,
-citecolor=blue!60!black,
-urlcolor=blue!60!black,
-filecolor=blue!60!black,
-citebordercolor=blue!60!black,
-pdfborder={0 0 0},
-pdfstartview=FitH,
-bookmarks=true,
-bookmarksopen=true,
-bookmarksnumbered=true,
-pdftitle={$title$},
-pdfauthor={$for(author)$$author$$sep$, $endfor$}
+  colorlinks=true,
+  linkcolor=blue!80!black,
+  citecolor=blue!60!black,
+  urlcolor=blue!60!black,
+  filecolor=blue!60!black,
+  citebordercolor=blue!60!black,
+  pdfborder={0 0 0},
+  pdfstartview=FitH,
+  bookmarks=true,
+  bookmarksopen=true,
+  bookmarksnumbered=true,
+  pdftitle={$title$},
+  pdfauthor={$for(author)$$author$$sep$, $endfor$}
 }
+
 % ==================== BIBLATEX (pour citations cliquables) ====================
 \usepackage[
   style=ieee,
@@ -246,18 +278,22 @@ pdfauthor={$for(author)$$author$$sep$, $endfor$}
 % Personnalisation des liens bibliographiques
 \DeclareFieldFormat{labelnumberwidth}{\mkbibbrackets{#1}}
 \renewcommand*{\bibfont}{\small}
+
 % ==================== PROTECTION LIGNES ORPHELINES ====================
 \clubpenalty=10000
 \widowpenalty=10000
 \displaywidowpenalty=10000
+
 % ==================== DÉFINITIONS POUR PANDOC ====================
 \providecommand{\tightlist}{%
-\setlength{\itemsep}{2pt}\setlength{\parskip}{6pt}
+  \setlength{\itemsep}{2pt}\setlength{\parskip}{6pt}
 }
 \newcommand{\passthrough}[1]{#1}
+
 $if(highlighting-macros)$
 $highlighting-macros$
 $endif$
+
 $if(csl-refs)$
 \newlength{\cslhangindent}
 \setlength{\cslhangindent}{1.5em}
@@ -270,10 +306,12 @@ $if(csl-refs)$
 \newcommand{\CSLRightInline}[1]{#1}
 \newcommand{\CSLIndent}[1]{\hspace*{\cslhangindent}#1}
 $endif$
+
 % ==================== VARIABLES PANDOC ====================
 \title{$title$}
 \author{$for(author)$$author$$sep$ \\ $endfor$}
 \date{$date$}
+
 % ==================== REDÉFINITION DE \maketitle ====================
 \makeatletter
 \renewcommand{\maketitle}{
@@ -316,19 +354,22 @@ $endif$
 \makeatother
 
 \usepackage{tabularx}
+
 % ==================== CORPS DU DOCUMENT ====================
 \begin{document}
 \maketitle
 \thispagestyle{firstpage}
-% --- Résumé ---
-$if(abstract_fr)$
+
+% --- Abstract ---
+$if(abstract)$
 \begin{center}
 \begin{minipage}{0.85\textwidth}
-\noindent \textbf{Résumé :} $abstract_fr$
+\noindent \textbf{Abstract:} $abstract$
 \end{minipage}
 \end{center}
 \vspace{0.5cm}
 $endif$
+
 $if(abstract_en)$
 \begin{center}
 \begin{minipage}{0.85\textwidth}
@@ -337,33 +378,41 @@ $if(abstract_en)$
 \end{center}
 \vspace{0.5cm}
 $endif$
-% --- Mots-clés ---
+
+
+% --- Keywords ---
 $if(keywords)$
 \begin{center}
 \begin{minipage}{0.85\textwidth}
-\noindent \textbf{Mots-clés :} $keywords$
+\noindent \textbf{Keywords:} $keywords$
 \end{minipage}
 \end{center}
 \vspace{0.5cm}
 $endif$
-% --- Remerciements ---
+
+% --- Acknowledgments ---
 $if(acknowledgments)$
 \begin{center}
 \begin{minipage}{0.85\textwidth}
-\noindent \textbf{Remerciements :} $acknowledgments$
+\noindent \textbf{Acknowledgments:} $acknowledgments$
 \end{minipage}
 \end{center}
 \vspace{1cm}
 $endif$
+
 % --- Table des matières ---
 $if(toc)$
 \clearpage
 \tableofcontents
 \clearpage
 $endif$
+
 \clearpage
 \pagestyle{fancy}
+
 $body$
+
 % ==================== BIBLIOGRAPHIE ====================
-\printbibliography[title={Références}]
+\printbibliography[title={References}]
+
 \end{document}

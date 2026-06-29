@@ -1,17 +1,143 @@
+# ============================================
+# LaTeX / Pandoc (fichiers de compilation)
+# ============================================
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.toc
+*.xdv
+*.synctex.gz
+*.nav
+*.snm
+*.vrb
+*.dvi
+*.ps
+*.lof
+*.lot
+*.tex~
+*.pdf
+
+# ============================================
 # Python
+# ============================================
 __pycache__/
-*.py[cod]
-*.so
+*.pyc
+*.pyo
+*.pyd
 .Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.spec
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
 
-# OS
-.DS_Store
-Thumbs.db
+# ============================================
+# Données
+# ============================================
+*.csv
+*.npy
+*.npz
+*.h5
+*.mat
+*.pkl
+*.pickle
+*.db
+*.sqlite
+*.sqlite3
+data/
+donnees/
+datasets/
+*.xlsx
+*.xls
 
-# IDE
+# ============================================
+# Figures brutes (garder seulement code/figures/)
+# ============================================
+figures_raw/
+raw_figures/
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.gif
+*.tiff
+*.bmp
+!code/figures/*.png
+!code/figures/*.jpg
+!code/figures/*.svg
+
+# ============================================
+# Éditeur / IDE
+# ============================================
 .vscode/
 .idea/
-
-# Temporary
+*.swp
+*.swo
+*~
+.nvim/
+*.bak
 *.tmp
 *.temp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ============================================
+# Jupyter
+# ============================================
+.ipynb_checkpoints/
+*.ipynb
+!notebooks/*.ipynb
+
+# ============================================
+# Environnements virtuels
+# ============================================
+venv/
+env/
+.env/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+myenv/
+pyenv/
+miniconda/
+anaconda/
+
+# ============================================
+# Fichiers binaires
+# ============================================
+*.o
+*.so
+*.dll
+*.exe
+*.class
+*.jar
+
+# ============================================
+# Fichiers de présentation
+# ============================================
+*.pptx
+*.odp
+*.key
+
+# ============================================
+# Divers
+# ============================================
+*.lock
+*.pid
+*.prof
+article/trash/
